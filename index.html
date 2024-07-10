@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Upload and Question Answering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: white;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form, div {
+            margin-bottom: 20px;
+        }
+        input[type="file"], input[type="text"], button {
+            display: block;
+            margin: 10px 0;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        #answer-container p {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload PDF File</h1>
+    <form id="upload-form">
+        <label for="pdf-file">Select a PDF file to upload:</label>
+        <input type="file" id="pdf-file" accept=".pdf" title="Select a PDF file">
+        <button id="upload-btn" type="button">Upload</button>
+    </form>
+    <div id="question-answer-container">
+        <h2>Ask a question</h2>
+        <label for="question-input">Enter your question:</label>
+        <input type="text" id="question-input" placeholder="Type your question here..." title="Enter your question">
+        <button id="ask-btn" type="button">Ask</button>
+        <div id="answer-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
